@@ -95,9 +95,11 @@ function Home() {
   return (
     <div className="w-full max-w-[425px] h-screen max-h-screen md:h-[844px] md:max-h-[844px] md:rounded-[40px] bg-[#FAFAFC] shadow-2xl mx-auto flex flex-col relative overflow-hidden border border-gray-100/50">
 
+      {/* Scrollable Content Container */}
+      <div className="flex-1 overflow-y-auto scrollbar-none">
 
-      {/* Top Profile / Action Bar */}
-      <header className="flex justify-between items-center px-6 pt-7 pb-3">
+        {/* Top Profile / Action Bar */}
+        <header className="flex justify-between items-center px-6 pt-7 pb-3">
         <div className="flex items-center gap-3">
           <img
             src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
@@ -321,6 +323,8 @@ function Home() {
           ))}
         </div>
       </section>
+
+      </div>
 
       {/* Anchored Bottom Navigation Bar */}
       <nav className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md h-20 border-t border-gray-100/80 flex items-center justify-around px-8 pb-4 z-40">
