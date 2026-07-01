@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import faceScanIcon from "@/assets/facescan.png";
 
 function Home() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("portraits");
 
   const sessions = [
@@ -111,13 +114,15 @@ function Home() {
             <h4 className="text-xs font-bold text-gray-800">Aura Studio</h4>
           </div>
         </div>
-        <button className="w-10 h-10 bg-white rounded-2xl flex items-center justify-center shadow-card hover:shadow-card-hover border border-gray-100/50 text-gray-700 hover:scale-102 active:scale-98 transition-all cursor-pointer">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="3" width="6" height="6" rx="1.5" />
-            <rect x="15" y="3" width="6" height="6" rx="1.5" />
-            <rect x="3" y="15" width="6" height="6" rx="1.5" />
-            <rect x="15" y="15" width="6" height="6" rx="1.5" />
-          </svg>
+        <button
+          onClick={() => navigate("/explore")}
+          className="w-10 h-10 bg-white rounded-2xl flex items-center justify-center shadow-card hover:shadow-card-hover border border-gray-100/50 text-gray-700 hover:scale-102 active:scale-98 transition-all cursor-pointer"
+        >
+          <img
+            src={faceScanIcon}
+            alt="Face Scan"
+            className="w-5 h-5 object-contain opacity-75 hover:opacity-100 transition-opacity"
+          />
         </button>
       </header>
 
