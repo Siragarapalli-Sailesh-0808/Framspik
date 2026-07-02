@@ -20,7 +20,7 @@ function Explore() {
           {/* Left Card - Green Boy */}
           <div
             className="absolute rounded-3xl overflow-hidden shadow-lg bg-[#DAE3E7] origin-center z-0 transition-all hover:scale-105 duration-300 border border-white/40"
-            style={{ width: '100px', height: '132px', left: '42px', top: '28px', transform: 'rotate(-6deg)' }}
+            style={{ width: '100px', height: '132px', left: '45px', top: '28px', transform: 'rotate(-6deg)' }}
           >
             <img
               src={avatarBoyGreen}
@@ -32,7 +32,7 @@ function Explore() {
           {/* Right Card - Yellow Girl */}
           <div
             className="absolute rounded-3xl overflow-hidden shadow-lg bg-[#FCF5E3] origin-center z-0 transition-all hover:scale-105 duration-300 border border-white/40"
-            style={{ width: '100px', height: '132px', right: '42px', top: '28px', transform: 'rotate(6deg)' }}
+            style={{ width: '100px', height: '132px', right: '45px', top: '28px', transform: 'rotate(6deg)' }}
           >
             <img
               src={avatarGirlYellow}
@@ -57,7 +57,7 @@ function Explore() {
 
         {/* Faint Watermarked Text */}
         <div className="text-[10px] uppercase tracking-[0.25em] text-gray-300/40 font-extrabold mt-12 mb-2 select-none">
-          wandermap
+          FRAMESPIK
         </div>
 
         {/* Title */}
@@ -66,12 +66,12 @@ function Explore() {
             <span className="-ml-0.5">Explore ton</span>
           </span>
           <br />
-          prochain voyage
+          Testing Content
         </h1>
 
         {/* Subtitle Description */}
         <p className="font-sans text-[13px] text-gray-400/80 font-medium text-center leading-relaxed mt-4 px-12">
-          Marque tes lieux préférés, partage<br />tes aventures et explore le monde.
+          Framespik Descrpition here<br />Test Sentence will be given here.
         </p>
 
         {/* Page indicator Dots */}
@@ -96,13 +96,13 @@ function Explore() {
           onClick={() => navigate("/")}
           className="font-sans w-full bg-white text-gray-800 text-sm font-bold py-4 rounded-[18px] border border-gray-100/60 shadow-[0_4px_12px_rgba(0,0,0,0.02)] hover:bg-gray-50 active:scale-[0.98] transition-all cursor-pointer text-center mt-3"
         >
-          J'ai déjà un compte
+          Go Back
         </button>
 
         {/* Privacy Note */}
         <p className="font-sans text-[10px] text-gray-400/60 font-medium text-center leading-relaxed mt-6 px-4">
-          Ta confidentialité est notre priorité.<br />
-          Nous ne partageons jamais ta position sans ton accord.
+          Test Inforamtion given here<br />
+          Framespik info given here very formally.
         </p>
       </div>
 
