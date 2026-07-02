@@ -98,12 +98,10 @@ function Home() {
   return (
     <div className="w-full max-w-[425px] h-dvh max-h-dvh md:h-[844px] md:max-h-[844px] md:rounded-[40px] bg-[#FAFAFC] md:shadow-2xl mx-auto flex flex-col relative overflow-hidden md:border md:border-gray-100/50">
 
-      {/* Scrollable Content Container */}
       <div className="flex-1 overflow-y-auto scrollbar-none">
 
-        {/* Top Profile / Action Bar */}
+        {/* Header */}
         <header className="flex justify-between items-center px-6 pt-7 pb-3">
-          {/* Rectangular Logo Box */}
           <div className="h-10 px-5 bg-[#FF7A1A] rounded-2xl flex items-center justify-center shadow-card border border-orange-600/10 select-none">
             <span className="font-sans text-[11px] font-black text-white tracking-[0.2em] uppercase">
               Framspik
@@ -121,14 +119,14 @@ function Home() {
           </button>
         </header>
 
-        {/* Hero Welcome */}
+        {/* Hero */}
         <section className="px-6 py-3">
           <h1 className="text-[28px] font-extrabold tracking-tight text-gray-900 leading-tight">
             Explore your<br />beautiful shoots!
           </h1>
         </section>
 
-        {/* Search and Filter Row */}
+        {/* Search */}
         <section className="flex gap-3 px-6 pb-5">
           <div className="flex-1 relative flex items-center">
             <svg width="16" height="16" className="absolute left-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -156,7 +154,7 @@ function Home() {
           </button>
         </section>
 
-        {/* Travel Places / Sessions */}
+        {/* Categories / Grid */}
         <section className="flex flex-col mb-4">
           <div className="flex justify-between items-center px-6 mb-3">
             <h2 className="text-base font-bold text-gray-800 tracking-tight">Shoot Sessions</h2>
@@ -166,9 +164,8 @@ function Home() {
           </div>
 
           <div className="flex items-stretch px-6 gap-2 min-h-[295px]">
-            {/* Vertical rotated text categories */}
+            {/* Sidebar Tabs */}
             <div className="flex flex-col justify-around py-4 items-start w-10 shrink-0 text-gray-400 font-bold select-none text-[10px]">
-              {/* Portraits Tab */}
               <div className="flex items-center gap-1.5 h-10 w-full">
                 <div className={`w-[3px] h-4 rounded-full transition-all duration-300 ${activeTab === "portraits" ? "bg-[#FF7A1A]" : "bg-transparent"}`} />
                 <button
@@ -180,7 +177,6 @@ function Home() {
                 </button>
               </div>
 
-              {/* Weddings Tab */}
               <div className="flex items-center gap-1.5 h-10 w-full">
                 <div className={`w-[3px] h-4 rounded-full transition-all duration-300 ${activeTab === "weddings" ? "bg-[#FF7A1A]" : "bg-transparent"}`} />
                 <button
@@ -192,7 +188,6 @@ function Home() {
                 </button>
               </div>
 
-              {/* Fashion Tab */}
               <div className="flex items-center gap-1.5 h-10 w-full">
                 <div className={`w-[3px] h-4 rounded-full transition-all duration-300 ${activeTab === "fashion" ? "bg-[#FF7A1A]" : "bg-transparent"}`} />
                 <button
@@ -204,7 +199,6 @@ function Home() {
                 </button>
               </div>
 
-              {/* All Tab */}
               <div className="flex items-center gap-1.5 h-10 w-full">
                 <div className={`w-[3px] h-4 rounded-full transition-all duration-300 ${activeTab === "all" ? "bg-[#FF7A1A]" : "bg-transparent"}`} />
                 <button
@@ -217,33 +211,29 @@ function Home() {
               </div>
             </div>
 
-            {/* Horizontally scrolling list of shoot cards */}
+            {/* Scrolling list */}
             <div className="flex-1 overflow-x-auto flex gap-4 scrollbar-none py-1 pl-1">
               {filteredSessions.map((session) => (
                 <div
                   key={session.id}
                   className="w-[195px] shrink-0 bg-white rounded-[28px] p-3 shadow-card border border-gray-100/50 hover:shadow-card-hover hover:scale-[1.01] transition-all flex flex-col"
                 >
-                  {/* Image Backdrop Container */}
                   <div className="relative rounded-[22px] overflow-hidden aspect-[1.15] w-full bg-gray-50">
                     <img
                       src={session.image}
                       alt={session.title}
                       className="w-full h-full object-cover"
                     />
-                    {/* Bookmark ribbon tag */}
                     <div className={`absolute top-0 right-4 ${session.featured ? "text-[#FFB84C]" : "text-gray-200/90"}`}>
                       <svg width="16" height="26" viewBox="0 0 24 32" fill="currentColor">
                         <path d="M0 0h24v28l-12-6-12 6z" />
                       </svg>
                     </div>
-                    {/* Glassmorphic Price tag */}
                     <div className="absolute bottom-2.5 right-2.5 bg-black/25 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full border border-white/10 shadow-sm">
                       {session.price}
                     </div>
                   </div>
 
-                  {/* Shoot Info */}
                   <div className="mt-2.5 flex-1 flex flex-col justify-between">
                     <div>
                       <h3 className="text-xs font-bold text-gray-800 tracking-tight leading-snug">
@@ -257,7 +247,6 @@ function Home() {
                         {session.location}
                       </div>
                     </div>
-                    {/* Session Duration */}
                     <div className="mt-2.5 w-fit bg-gray-50 text-[9px] text-gray-500 font-bold px-3 py-1 rounded-full border border-gray-100/50">
                       {session.duration}
                     </div>
@@ -273,7 +262,7 @@ function Home() {
           </div>
         </section>
 
-        {/* Travel Groups / Collaborations */}
+        {/* Collaborations */}
         <section className="flex flex-col mb-24">
           <div className="flex justify-between items-center px-6 mb-2.5">
             <h2 className="text-base font-bold text-gray-800 tracking-tight">Shared Galleries</h2>
@@ -288,13 +277,11 @@ function Home() {
                 key={collab.id}
                 className="w-[245px] shrink-0 bg-white rounded-[24px] p-3 shadow-card border border-gray-100/50 hover:shadow-card-hover transition-all flex items-center gap-3"
               >
-                {/* Gallery Cover square image */}
                 <img
                   src={collab.image}
                   alt={collab.title}
                   className="w-14 h-14 object-cover rounded-[18px] shadow-inner bg-gray-50"
                 />
-                {/* Group Text Details */}
                 <div className="flex-1 min-w-0 flex flex-col justify-center">
                   <h3 className="text-xs font-bold text-gray-800 truncate tracking-tight">
                     {collab.title}
@@ -302,7 +289,6 @@ function Home() {
                   <p className="text-[9px] text-gray-400 font-semibold mt-0.5">
                     {collab.type}
                   </p>
-                  {/* Avatars layer */}
                   <div className="flex items-center gap-1 mt-1.5">
                     <div className="flex items-center">
                       {collab.members.map((member, index) => (
@@ -326,14 +312,13 @@ function Home() {
 
       </div>
 
-      {/* Anchored Bottom Navigation Bar */}
+      {/* Footer tab bar */}
       <nav className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md h-20 border-t border-gray-100/80 flex items-center justify-around px-8 pb-4 z-40">
         <button className="flex flex-col items-center justify-center text-[#B5B5BE] hover:text-[#9A9AB0] p-2 hover:scale-105 active:scale-95 transition-all cursor-pointer bg-transparent border-0 outline-none">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
           </svg>
         </button>
-        {/* Black rounded square plus button */}
         <button className="w-12 h-12 bg-gray-900 rounded-[18px] flex items-center justify-center text-white shadow-sm hover:bg-gray-800 hover:scale-105 active:scale-95 transition-all cursor-pointer border-0 outline-none">
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
