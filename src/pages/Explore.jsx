@@ -20,7 +20,7 @@ function Explore() {
           {/* Left Card - Green Boy */}
           <div
             className="absolute rounded-3xl overflow-hidden shadow-lg bg-[#DAE3E7] origin-center z-0 transition-all hover:scale-105 duration-300 border border-white/40"
-            style={{ width: '100px', height: '132px', left: '45px', top: '28px', transform: 'rotate(-6deg)' }}
+            style={{ width: '100px', height: '132px', left: '43px', top: '28px', transform: 'rotate(-6deg)' }}
           >
             <img
               src={avatarBoyGreen}
@@ -32,7 +32,7 @@ function Explore() {
           {/* Right Card - Yellow Girl */}
           <div
             className="absolute rounded-3xl overflow-hidden shadow-lg bg-[#FCF5E3] origin-center z-0 transition-all hover:scale-105 duration-300 border border-white/40"
-            style={{ width: '100px', height: '132px', right: '45px', top: '28px', transform: 'rotate(6deg)' }}
+            style={{ width: '100px', height: '132px', right: '43px', top: '28px', transform: 'rotate(6deg)' }}
           >
             <img
               src={avatarGirlYellow}
